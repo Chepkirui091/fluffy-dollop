@@ -1,54 +1,93 @@
-import {View, Text, StyleSheet, Image, Button} from "react-native";
+import React from "react";
+import {View, Text, StyleSheet, Image} from "react-native";
+import {useNavigation} from "@react-navigation/native";
+import Button from "../../components/Button";
+import colors from "../../theme/colors";
 
 const LandingScreen = () => {
-    let loginButton = "Login";
-    let sinUpButton = "Sign Up";
+    const navigation = useNavigation();
+
     return (
-        <View style={styles.container} >
+        <View style={styles.container}>
             <View style={styles.headerContainer}>
-                <View style={styles.ImageContainer}>
-                    <Image style={styles.LandingImage} source={require('../../assets/landing.png')} />
+                <View style={styles.imageContainer}>
+                    <Image
+                        style={styles.landingImage}
+                        source={require("../../assets/landing.png")}
+                    />
                 </View>
                 <Text style={styles.headerText}>Discover Your Dream Job here</Text>
-                <Text style={styles.descriptionText}>Explore all the existing job roles based on your interest and study major</Text>
+                <Text style={styles.descriptionText}>
+                    Explore all the existing job roles based on your interest and study major
+                </Text>
                 <View style={styles.landingButtons}>
-                    <Button title={loginButton} style={styles.loginButton}  />
-                    <Button title={sinUpButton} style={styles.signUpButton}  />
-
+                    <Button
+                        title="Login"
+                        variant="contained"
+                        color="primary"
+                        onPress={() => navigation.navigate("Login")}
+                        style={styles.loginButton}
+                    />
+                    <Button
+                        title="Sign Up"
+                        variant="outlined"
+                        color="primary"
+                        onPress={() => navigation.navigate("SignUp")}
+                        style={styles.signUpButton}
+                    />
                 </View>
             </View>
         </View>
-    )
-}
+    );
+};
 
-export default LandingScreen
-
+export default LandingScreen;
 
 const styles = StyleSheet.create({
-    headerText: {
-        color: "#1F41BB",
-        textAlign: "center",
-        fontSize: 35,
-        // paddingHorizontal: 80,
-        fontWeight: "semiBold",
-        marginHorizontal: 40,
-    },
-    ImageContainer: {
+    container: {
+        flex: 1,
         justifyContent: "center",
+        backgroundColor: colors.white,
     },
-    LandingImage: {
-        width: 365,
-        height: 370,
-
+    headerContainer: {
+        alignItems: "center",
+        paddingHorizontal: 20,
     },
-    headerContainer: undefined,
+    headerText: {
+        color: colors.primary,
+        textAlign: "center",
+        fontSize: 30,
+        fontWeight: "600",
+        marginVertical: 20,
+    },
+    imageContainer: {
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    landingImage: {
+        width: 300,
+        height: 300,
+        resizeMode: "contain",
+    },
     descriptionText: {
-        fontSize: 14,
+        fontSize: 16,
         textAlign: "center",
         marginHorizontal: 20,
+        marginBottom: 30,
     },
     landingButtons: {
         flexDirection: "row",
-        justifyContent: "space-around",
+        justifyContent: "space-between",
+        gap: 10,
+        // width: "80%",
+    },
+    signUpButton: {
+        // backgroundColor: colors.white,
+        width: 160,
+        color: colors.black,
+    },
+    loginButton: {
+        width: 160
     }
-})
+
+});
