@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Alert } from "react-native";
 import Input from "../../components/input";
 import colors from "../../theme/colors";
 import Icon from "react-native-vector-icons/FontAwesome";
-import Button from "../../components/Button";
+import DMTButton from "../../components/Button";
 
 const LoginScreen = () => {
     const [email, setEmail] = useState("");
@@ -14,7 +14,7 @@ const LoginScreen = () => {
     };
 
     const handleSignIn = () => {
-        Alert.alert("Sign In", "Sign In process triggered");
+        Alert.alert("Sign In", "Sign In process triggered.");
     };
 
     const handleGoogleLogin = () => {
@@ -57,7 +57,7 @@ const LoginScreen = () => {
             />
 
             <View style={styles.forgotPasswordContainer}>
-                <Button
+                <DMTButton
                     title="Forgot Password?"
                     variant="text"
                     color="primary"
@@ -66,7 +66,7 @@ const LoginScreen = () => {
                 />
             </View>
 
-            <Button
+            <DMTButton
                 title="Sign In"
                 variant="contained"
                 color="primary"
@@ -74,7 +74,7 @@ const LoginScreen = () => {
                 style={styles.signInButton}
             />
 
-            <Button
+            <DMTButton
                 title="Create a new account"
                 variant="outlined"
                 color="primary"
@@ -82,32 +82,41 @@ const LoginScreen = () => {
                 style={styles.createAccountButton}
             />
 
-            <View style={styles.socialButtonsContainer}>
-                <Button
-                    title="Google"
-                    variant="contained"
-                    color="google"
+            <View style={styles.socialIconsContainer}>
+                <Icon.Button
+                    name="google"
+                    backgroundColor="#db4437"
+                    size={25}
                     onPress={handleGoogleLogin}
-                    icon={<Icon name="google" size={20} color="#fff" />}
-                    style={styles.iconButton}
-                />
-                <Button
-                    title="Instagram"
-                    variant="contained"
-                    color="instagram"
+                    borderRadius={25}
+                    style={styles.socialButton}
+                    iconStyle={styles.iconStyle}
+                >
+                </Icon.Button>
+                <Icon.Button
+                    name="instagram"
+                    backgroundColor="#C13584"
+                    size={25}
                     onPress={handleInstagramLogin}
-                    icon={<Icon name="instagram" size={20} color="#fff" />}
-                    style={styles.iconButton}
-                />
-                <Button
-                    title="Facebook"
-                    variant="contained"
-                    color="facebook"
+                    borderRadius={25}
+                    style={styles.socialButton}
+                    iconStyle={styles.iconStyle}
+                >
+
+                </Icon.Button>
+                <Icon.Button
+                    name="facebook"
+                    backgroundColor="#4267B2"
+                    size={25}
                     onPress={handleFacebookLogin}
-                    icon={<Icon name="facebook" size={20} color="#fff" />}
-                    style={styles.iconButton}
-                />
+                    borderRadius={25}
+                    style={styles.socialButton}
+                    iconStyle={styles.iconStyle}
+                >
+
+                </Icon.Button>
             </View>
+
         </View>
     );
 };
@@ -116,7 +125,6 @@ export default LoginScreen;
 
 const styles = StyleSheet.create({
     container: {
-        // flex: 1,
         justifyContent: "center",
         alignItems: "center",
         padding: 20,
@@ -141,11 +149,9 @@ const styles = StyleSheet.create({
     },
     forgotPasswordContainer: {
         alignSelf: "flex-end",
-        // marginBottom: 10,
     },
     forgotPasswordText: {
         color: colors.primary,
-        // textDecorationLine: "underline",
         fontSize: 14,
         fontWeight: "semibold",
     },
@@ -157,15 +163,13 @@ const styles = StyleSheet.create({
         marginTop: 15,
         width: "100%",
     },
-    socialButtonsContainer: {
+    socialIconsContainer: {
         marginTop: 30,
         flexDirection: "row",
         justifyContent: "space-between",
         width: "100%",
     },
-    iconButton: {
-        flex: 1,
-        marginHorizontal: 5,
-        justifyContent: "center",
+    iconStyle: {
+        marginRight: 0, // Removes unnecessary spacing
     },
 });

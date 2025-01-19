@@ -2,7 +2,7 @@ import React from "react";
 import { TouchableOpacity, Text } from "react-native";
 import styles from "./Button.styles";
 
-const Button = ({
+const DMTButton = ({
                     title,
                     onPress,
                     variant = "contained",
@@ -44,4 +44,4 @@ const Button = ({
     );
 };
 
-export default Button;
+export default DMTButton;

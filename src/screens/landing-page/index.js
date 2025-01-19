@@ -3,6 +3,7 @@ import {View, Text, StyleSheet, Image} from "react-native";
 import {useNavigation} from "@react-navigation/native";
 import Button from "../../components/Button";
 import colors from "../../theme/colors";
+import DMTButton from "../../components/Button";
 
 const LandingScreen = () => {
     const navigation = useNavigation();
@@ -21,14 +22,14 @@ const LandingScreen = () => {
                     Explore all the existing job roles based on your interest and study major
                 </Text>
                 <View style={styles.landingButtons}>
-                    <Button
+                    <DMTButton
                         title="Login"
                         variant="contained"
                         color="primary"
                         onPress={() => navigation.navigate("Login")}
                         style={styles.loginButton}
                     />
-                    <Button
+                    <DMTButton
                         title="Sign Up"
                         variant="outlined"
                         color="primary"
