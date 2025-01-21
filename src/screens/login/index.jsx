@@ -2,35 +2,57 @@ import React, { useState } from "react";
 import { View, Text, StyleSheet, Alert } from "react-native";
 import Input from "../../components/input";
 import colors from "../../theme/colors";
-import Icon from "react-native-vector-icons/FontAwesome";
+import Icon from "react-native-vector-icons/Ionicons";
 import DMTButton from "../../components/Button";
+import {useNavigation} from "@react-navigation/native";
+import {ROUTES} from "../../constants";
 
 const LoginScreen = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const navigation = useNavigation();
+
+
+    const SocialLoginButton = ({ name, backgroundColor, onPress }) => (
+        <Icon.Button
+            name={name}
+            backgroundColor={backgroundColor}
+            size={20}
+            onPress={onPress}
+            borderRadius={10}
+            style={styles.socialButton}
+            iconStyle={styles.iconStyle}
+        />
+    );
 
     const handleForgotPassword = () => {
         Alert.alert("Forgot Password", "Password recovery link will be sent to your email.");
     };
 
     const handleSignIn = () => {
-        Alert.alert("Sign In", "Sign In process triggered.");
+        if (email === "daphne@gmail.com" && password === "pass") {
+            navigation.navigate("home");
+        } else {
+            // Show an error if the credentials are incorrect
+            Alert.alert("Sign In", "Invalid email or password. Please try again.");
+        }
     };
 
+
     const handleGoogleLogin = () => {
-        Alert.alert("Google Login", "Google login process initiated.");
+        Alert.alert("Google login", "Google login process initiated.");
     };
 
     const handleInstagramLogin = () => {
-        Alert.alert("Instagram Login", "Instagram login process initiated.");
+        Alert.alert("Instagram login", "Instagram login process initiated.");
     };
 
     const handleFacebookLogin = () => {
-        Alert.alert("Facebook Login", "Facebook login process initiated.");
+        Alert.alert("Facebook login", "Facebook login process initiated.");
     };
 
     const handleCreateAccount = () => {
-        Alert.alert("Create Account", "Navigate to Create Account Screen.");
+        navigation.navigate(ROUTES.SIGN_UP);
     };
 
     return (
@@ -82,40 +104,29 @@ const LoginScreen = () => {
                 style={styles.createAccountButton}
             />
 
-            <View style={styles.socialIconsContainer}>
-                <Icon.Button
-                    name="google"
-                    backgroundColor="#db4437"
-                    size={25}
-                    onPress={handleGoogleLogin}
-                    borderRadius={25}
-                    style={styles.socialButton}
-                    iconStyle={styles.iconStyle}
-                >
-                </Icon.Button>
-                <Icon.Button
-                    name="instagram"
-                    backgroundColor="#C13584"
-                    size={25}
-                    onPress={handleInstagramLogin}
-                    borderRadius={25}
-                    style={styles.socialButton}
-                    iconStyle={styles.iconStyle}
-                >
+            <View style={styles.socials}>
+                <Text>Or continue with:</Text>
+                <View style={styles.socialIconsContainer}>
+                    <SocialLoginButton
+                        name="logo-google"
+                        backgroundColor="#db4437"
+                        onPress={() => Alert.alert("Google login", "Google login process initiated.")}
+                    />
+                    <SocialLoginButton
+                        name="logo-instagram"
+                        backgroundColor="#C13584"
+                        onPress={() => Alert.alert("Instagram login", "Instagram login process initiated.")}
+                    />
+                    <SocialLoginButton
+                        name="logo-facebook"
+                        backgroundColor="#4267B2"
+                        onPress={() => Alert.alert("Facebook login", "Facebook login process initiated.")}
+                    />
+                    {/*<Icon name="facebook"  />*/}
+                </View>
 
-                </Icon.Button>
-                <Icon.Button
-                    name="facebook"
-                    backgroundColor="#4267B2"
-                    size={25}
-                    onPress={handleFacebookLogin}
-                    borderRadius={25}
-                    style={styles.socialButton}
-                    iconStyle={styles.iconStyle}
-                >
-
-                </Icon.Button>
             </View>
+
 
         </View>
     );
@@ -164,12 +175,19 @@ const styles = StyleSheet.create({
         width: "100%",
     },
     socialIconsContainer: {
-        marginTop: 30,
+        marginTop: 10,
         flexDirection: "row",
-        justifyContent: "space-between",
-        width: "100%",
+        justifyContent: "center",
+        gap: 12,
     },
     iconStyle: {
-        marginRight: 0, // Removes unnecessary spacing
+        marginRight: 0,
     },
+    socials: {
+        marginTop: 20,
+       flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+    }
+
 });

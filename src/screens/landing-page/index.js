@@ -1,9 +1,9 @@
 import React from "react";
 import {View, Text, StyleSheet, Image} from "react-native";
 import {useNavigation} from "@react-navigation/native";
-import Button from "../../components/Button";
 import colors from "../../theme/colors";
 import DMTButton from "../../components/Button";
+import {ROUTES} from "../../constants";
 
 const LandingScreen = () => {
     const navigation = useNavigation();
@@ -26,14 +26,14 @@ const LandingScreen = () => {
                         title="Login"
                         variant="contained"
                         color="primary"
-                        onPress={() => navigation.navigate("Login")}
+                        onPress={() => navigation.navigate(ROUTES.LOGIN)}
                         style={styles.loginButton}
                     />
                     <DMTButton
                         title="Sign Up"
                         variant="outlined"
                         color="primary"
-                        onPress={() => navigation.navigate("SignUp")}
+                        onPress={() => navigation.navigate(ROUTES.SIGN_UP)}
                         style={styles.signUpButton}
                     />
                 </View>
