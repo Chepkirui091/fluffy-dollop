@@ -25,7 +25,7 @@ const LandingScreen = () => {
                     <DMTButton
                         title="Login"
                         variant="contained"
-                        color="primary"
+                        color={colors.primary.main}
                         onPress={() => navigation.navigate(ROUTES.LOGIN)}
                         style={styles.loginButton}
                     />
@@ -48,14 +48,14 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: "center",
-        backgroundColor: colors.white,
+        backgroundColor: colors.white.main,
     },
     headerContainer: {
         alignItems: "center",
         paddingHorizontal: 20,
     },
     headerText: {
-        color: colors.primary,
+        color: colors.primary.main,
         textAlign: "center",
         fontSize: 30,
         fontWeight: "600",
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     signUpButton: {
         // backgroundColor: colors.white,
         width: 160,
-        color: colors.black,
+        color: colors.black.main,
     },
     loginButton: {
         width: 160

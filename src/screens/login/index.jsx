@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
     headerText: {
-        color: colors.primary,
+        color: colors.primary.main,
         fontWeight: "bold",
         textAlign: "center",
         margin: 10,
@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
         alignSelf: "flex-end",
     },
     forgotPasswordText: {
-        color: colors.primary,
+        color: colors.primary.main,
         fontSize: 14,
         fontWeight: "semibold",
     },

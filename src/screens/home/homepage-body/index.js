@@ -1,10 +1,11 @@
 import React from "react";
 import { View, StyleSheet, Text } from "react-native";
+import TransactionLinks from "./transaction links";
 
-const HomePageBody = () => {
+const HomepageBody = () => {
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>Welcome to the Home Page!</Text>
+            <TransactionLinks />
         </View>
     );
 };
@@ -27,4 +28,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default HomePageBody;
+export default HomepageBody;

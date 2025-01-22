@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
     headerText: {
-        color: colors.primary,
+        color: colors.primary.main,
         fontWeight: "bold",
         textAlign: "center",
         margin: 10,

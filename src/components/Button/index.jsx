@@ -1,12 +1,13 @@
 import React from "react";
 import { TouchableOpacity, Text } from "react-native";
 import styles from "./Button.styles";
+import colors from "../../theme/colors";
 
 const DMTButton = ({
                     title,
                     onPress,
                     variant = "contained",
-                    color = "primary",
+                    color = colors.primary.main,
                     textStyle,
                     disabled = false,
                     style,

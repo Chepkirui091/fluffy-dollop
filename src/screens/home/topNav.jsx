@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
     },
     balanceText: {
         color: "#fff",
-        fontSize: 16,
+        fontSize: 32,
         marginRight: 10,
     },
     greetingText: {

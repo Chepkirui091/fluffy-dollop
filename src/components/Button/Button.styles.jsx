@@ -10,37 +10,37 @@ export default StyleSheet.create({
         alignItems: "center",
     },
     contained: {
-        backgroundColor: colors.primary,
+        backgroundColor: colors.primary.main,
     },
     contained_primary: {
-        backgroundColor: colors.primary,
+        backgroundColor: colors.primary.main,
     },
     contained_secondary: {
-        backgroundColor: colors.secondary,
+        backgroundColor: colors.secondary.main,
     },
     contained_custom: {
-        backgroundColor: colors.custom,
+        backgroundColor: colors.custom.main,
     },
     outlined: {
         borderWidth: 2,
     },
     outlined_primary: {
-        borderColor: colors.primary,
+        borderColor: colors.primary.main,
     },
     outlined_secondary: {
-        borderColor: colors.secondary,
+        borderColor: colors.secondary.main,
     },
     outlined_custom: {
-        borderColor: colors.custom,
+        borderColor: colors.custom.main,
     },
     text: {
         backgroundColor: "transparent",
     },
     text_primary: {
-        color: colors.primary,
+        color: colors.primary.main,
     },
     text_secondary: {
-        color: colors.secondary,
+        color: colors.secondary.main,
     },
     text_custom: {
         color: colors.custom,
@@ -50,13 +50,13 @@ export default StyleSheet.create({
         fontWeight: "bold",
     },
     containedText: {
-        color: colors.white,
+        color: colors.white.main,
     },
     outlinedText: {
-        color: colors.primary,
+        color: colors.primary.main,
     },
     disabled: {
-        backgroundColor: colors.gray,
-        borderColor: colors.gray,
+        backgroundColor: colors.gray.main,
+        borderColor: colors.gray.main,
     },
 });
