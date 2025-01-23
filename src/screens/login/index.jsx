@@ -31,7 +31,7 @@ const LoginScreen = () => {
 
     const handleSignIn = () => {
         if (email === "daphne@gmail.com" && password === "pass") {
-            navigation.navigate("home");
+            navigation.navigate(ROUTES.MAIN);
         } else {
             // Show an error if the credentials are incorrect
             Alert.alert("Sign In", "Invalid email or password. Please try again.");

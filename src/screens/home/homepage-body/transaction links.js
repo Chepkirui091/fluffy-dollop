@@ -4,8 +4,10 @@ import colors from "../../../theme/colors";
 import PromoBannerSlider from "./promo-slider";
 
 const images = [
+    "https://img.freepik.com/free-vector/black-friday-sale-modern-banner-with-text-soace_1017-34852.jpg?t=st=1737534235~exp=1737537835~hmac=947d3b84ba77aa1ebc9ede8873a7aa937b9f20e6cf43c85afd0d44b8bf6941e3&w=1380",
     "https://www.shutterstock.com/shutterstock/photos/2213206619/display_1500/stock-vector-mega-sale-special-offer-stage-podium-percent-stage-podium-scene-with-for-award-decor-element-2213206619.jpg",
-"https://www.shutterstock.com/shutterstock/photos/2213206619/display_1500/stock-vector-mega-sale-special-offer-stage-podium-percent-stage-podium-scene-with-for-award-decor-element-2213206619.jpg"
+    "https://img.freepik.com/free-vector/elegant-black-friday-sale-banner-layout-template_1035-17445.jpg?t=st=1737533844~exp=1737537444~hmac=8b733b7340ce13c53e930d2f2b17be9efbd49ded2edbf72492a7c1171e99fa70&w=1380",
+
 ];
 
 const TransactionLinks = () => {
