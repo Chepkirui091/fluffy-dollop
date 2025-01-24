@@ -55,9 +55,52 @@ const TransactionLinks = () => {
                     <Text style={styles.actionText}>Withdraw</Text>
                 </View>
             </View>
-            <Text style={styles.titleText}>Transactions</Text>
+            <Text style={styles.titleText}>Promo & Discount</Text>
             <View style={styles.container}>
                 <PromoBannerSlider images={images} />
+            </View>
+
+            <Text style={styles.titleText}>Payments</Text>
+            <View style={styles.container}>
+                <View style={styles.ellipseContainer}>
+                    <View style={styles.ellipse}>
+                        <Image source={require('../../../assets/esahal/payments.png')} style={styles.icon} />
+                    </View>
+                    <Text style={styles.actionText}>Pay Bills</Text>
+                </View>
+                <View style={styles.ellipseContainer}>
+                    <View style={styles.ellipse}>
+                        <Image source={require('../../../assets/esahal/airtime.png')} style={styles.icon} />
+                    </View>
+                    <Text style={styles.actionText}>Airtime Top Up</Text>
+                </View>
+                <View style={styles.ellipseContainer}>
+                    <View style={styles.ellipse}>
+                        <Image source={require('../../../assets/esahal/request_money.png')} style={styles.icon} />
+                    </View>
+                    <Text style={styles.actionText}>Request Money</Text>
+                </View>
+            </View>
+            <Text style={styles.titleText}>Others</Text>
+            <View style={styles.container}>
+                <View style={styles.ellipseContainer}>
+                    <View style={styles.ellipse}>
+                        <Image source={require('../../../assets/esahal/banks.png')} style={styles.icon} />
+                    </View>
+                    <Text style={styles.actionText}>Other Banks</Text>
+                </View>
+                <View style={styles.ellipseContainer}>
+                    <View style={styles.ellipse}>
+                        <Image source={require('../../../assets/esahal/settings.png')} style={styles.icon} />
+                    </View>
+                    <Text style={styles.actionText}>Settings</Text>
+                </View>
+                <View style={styles.ellipseContainer}>
+                    <View style={styles.ellipse}>
+                        <Image source={require('../../../assets/esahal/e-float_balance.png')} style={styles.icon} />
+                    </View>
+                    <Text style={styles.actionText}>Etce Tera</Text>
+                </View>
             </View>
         </View>
 
