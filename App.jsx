@@ -19,7 +19,6 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName={ROUTES.MAIN} screenOptions={{ headerShown: false }}>
           <Stack.Screen name={ ROUTES.LANDING_SCREEN} component={LandingScreen} />
-
           <Stack.Screen name={ROUTES.LOGIN} component={LoginScreen} />
           <Stack.Screen name={ROUTES.SIGN_UP} component={SignUpScreen} />
           <Stack.Screen name={ROUTES.MAIN} component={MainScreen} />

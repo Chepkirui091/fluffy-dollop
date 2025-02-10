@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     },
     greetingsContainer: {
         position: "absolute",
-        top: 53, // Below the sticky header
+        top: 53,
         left: 0,
         right: 0,
         zIndex: 5,
