@@ -3,6 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { HomeScreen } from '../screens/home';
+import Wallet from "../screens/wallet";
 
 const Tab = createBottomTabNavigator();
 
@@ -63,7 +64,7 @@ const BottomNavigationBar = () => {
                 },
             })}
         >
-            <Tab.Screen name="Wallet" component={WalletScreen} />
+            <Tab.Screen name="Wallet" component={Wallet} />
             <Tab.Screen name="Transactions" component={TransactionsScreen} />
             <Tab.Screen
                 name="Home"

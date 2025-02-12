@@ -5,7 +5,6 @@ import {
     StyleSheet,
     Image,
     Dimensions,
-    FlatList,
     Animated,
 } from "react-native";
 import colors from "../../../theme/colors";
